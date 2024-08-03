@@ -1,5 +1,9 @@
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 class Config:
-    SECRET_KEY = 'your_secret_key'
-    SPOTIFY_API_TOKEN = 'your_spotify_api_token'
-    APPLE_MUSIC_API_TOKEN = 'your_apple_music_api_token'
-    # Add other configurations if needed
+    SECRET_KEY = os.getenv('SECRET_KEY')
+    SPOTIFY_API_TOKEN = os.getenv('SPOTIFY_API_TOKEN')
+    APPLE_MUSIC_API_TOKEN = os.getenv('APPLE_MUSIC_API_TOKEN')
